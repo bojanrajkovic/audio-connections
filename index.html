@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- No interactive-widget=resizes-content: letting the soft keyboard shrink
+       the layout viewport flips the (orientation: landscape) media query when
+       the surviving viewport is wider than tall, swapping the app into
+       landscape chrome mid-type. The NoteSheet instead lifts above the
+       keyboard via the visualViewport-driven --keyboard-inset (see App),
+       which works on iOS and Android without resizing the layout viewport. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- App overwrites this at runtime with the current puzzle's day + author.
+       Keep the static fallback generic so it can't drift as puzzles ship. -->
+  <title>Audio Connections</title>
+  <meta name="description" content="Find four groups of four songs. A daily music puzzle." />
+  <link rel="canonical" href="https://connections.audio/" />
+  <!-- Social preview cards. Scrapers don't run JS, so these reference the
+       static OG image rather than the per-puzzle title the app sets at runtime. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Audio Connections" />
+  <meta property="og:title" content="Audio Connections" />
+  <meta property="og:description" content="Find four groups of four songs. A daily music puzzle." />
+  <meta property="og:url" content="https://connections.audio/" />
+  <meta property="og:image" content="https://connections.audio/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Audio Connections — a daily music puzzle. Find four groups of four songs." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Audio Connections" />
+  <meta name="twitter:description" content="Find four groups of four songs. A daily music puzzle." />
+  <meta name="twitter:image" content="https://connections.audio/og-image.png" />
+  <meta name="twitter:image:alt" content="Audio Connections — a daily music puzzle. Find four groups of four songs." />
+  <!-- PWA: once "Add to Home Screen"d, display:standalone in the manifest
+       removes the browser URL bar entirely. -->
+  <link rel="manifest" href="/audio-connections/manifest.webmanifest" />
+  <meta name="theme-color" content="#0f1013" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Audio Connections" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/audio-connections/icons/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/audio-connections/icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/audio-connections/icons/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/audio-connections/icons/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script type="module" crossorigin src="/audio-connections/assets/index-YZ0vgbms.js"></script>
+  <link rel="stylesheet" crossorigin href="/audio-connections/assets/index-BwY-ZkVO.css">
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
